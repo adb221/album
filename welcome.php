@@ -308,7 +308,7 @@ if(!isset($_SESSION['user'])) {
               <h4 class="fst-italic">Ultimi voti</h4>
               <ul class="list-unstyled g-3">
                 <li>
-                  <a class="d-flex flex-column bg-white rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
+                  <a class="d-flex flex-column bg-white shadow-sm rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
                     <img class="bd-placeholder-img rounded" width="64" height="64" src="https://m.media-amazon.com/images/I/81nFF-rXdRL._UF1000,1000_QL80_.jpg">
                     <div class="col-lg-8 d-flex flex-column">
                         <div class="col-10 d-flex flex-column">
@@ -324,7 +324,7 @@ if(!isset($_SESSION['user'])) {
                   </a>
                 </li>
                 <li>
-                  <a class="d-flex flex-column bg-white rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
+                  <a class="d-flex flex-column bg-white shadow-sm rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
                     <img class="bd-placeholder-img rounded" width="64" height="64" src="https://i.scdn.co/image/ab67616d0000b2737aede4855f6d0d738012e2e5">
                     <div class="col-lg-8 d-flex flex-column">
                         <div class="col-10 d-flex flex-column">
@@ -340,7 +340,7 @@ if(!isset($_SESSION['user'])) {
                   </a>
                 </li>
                 <li>
-                  <a class="d-flex flex-column bg-white rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
+                  <a class="d-flex flex-column bg-white shadow-sm rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
                     <img class="bd-placeholder-img rounded" width="64" height="64" src="https://i.scdn.co/image/ab67616d0000b273d9194aa18fa4c9362b47464f">
                     <div class="col-lg-8 d-flex flex-column">
                         <div class="col-10 d-flex flex-column">
@@ -356,7 +356,7 @@ if(!isset($_SESSION['user'])) {
                   </a>
                 </li>
                 <li>
-                  <a class="d-flex flex-column bg-white rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
+                  <a class="d-flex flex-column bg-white shadow-sm rounded flex-lg-row gap-3 align-items-start align-items-lg-center p-3 link-body-emphasis text-decoration-none mb-3" href="#">
                     <img class="bd-placeholder-img rounded" width="64" height="64" src="https://pixelframe.design/wp-content/uploads/2024/10/Chromakopia_album-cover_tyler-Creator_full-large.jpeg">
                     <div class="col-lg-8 d-flex flex-column">
                         <div class="col-10 d-flex flex-column">

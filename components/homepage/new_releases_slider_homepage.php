@@ -107,45 +107,49 @@ $(document).ready(function() {
     <div class="slider-wrapper">
         <?php foreach ($new_releases as $release): ?>
             <div class="slide">
-                <div class="card bg-white rounded mb-4 position-relative">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-xl-6 p-4">
-                            <img class="bd-placeholder-img rounded" style="width: 100%;height: auto;" src="<?php echo htmlspecialchars($release['cover']); ?>" alt="<?php echo htmlspecialchars($release['albumName']); ?>">
+                <div class="card border-0 bg-white shadow-sm rounded position-relative">
+                    <div class="row gx-0">
+                        <div class="col-sm-12 col-md-12 col-xl-6">
+                            <div class="p-4">
+                                <img class="bd-placeholder-img rounded" style="width: 100%;height: auto;" src="<?php echo htmlspecialchars($release['cover']); ?>" alt="<?php echo htmlspecialchars($release['albumName']); ?>">
+                            </div>
                         </div>
-                        <div class="col-md-12 col-xl-6 col-sm-12 p-4 d-flex flex-column position-static">
-                            <!-- Titolo dell'album come link -->
-                            <label class="d-inline-block mb-1">
-                                <a href="album.php?albumId=<?php echo urlencode($release['albumId']); ?>" class="text-decoration-none">
+                        <div class="col-md-12 col-xl-6 col-sm-12">
+                            <div class="p-4 ps-0 d-flex flex-column position-static">
+                                <!-- Titolo dell'album come link -->
+                                <label class="d-inline-block mb-1">
+                                    <a href="album.php?albumId=<?php echo urlencode($release['albumId']); ?>" class="text-decoration-none">
                                     <strong><?php echo htmlspecialchars($release['albumName']); ?></strong>
-                                </a>
-                            </label>
+                                    </a>
+                                </label>
 
-                            <!-- Artisti come link separati -->
-                            <small class="mb-2 text-body-tertiary">
-                                by <i>
-                                <?php 
-                                    // Converti gli artistIds e artistNames in array usando "|" come separatore
-                                    $artistIds = explode('|', $release['artistIds']);
-                                    $artistNames = explode('|', $release['artistNames']);
-                                    
-                                    // Itera sugli artisti e crea un link per ciascuno
-                                    $artistLinks = [];
-                                    foreach ($artistIds as $index => $artistId) {
-                                        $artistName = htmlspecialchars($artistNames[$index]);
-                                        $artistLinks[] = "<a href='artist.php?artistId=" . urlencode($artistId) . "' class='text-decoration-none'>$artistName</a>";
-                                    }
-                                    
-                                    // Unisci i link con una virgola
-                                    echo implode(', ', $artistLinks);
-                                ?></i>
-                            </small>
+                                <!-- Artisti come link separati -->
+                                <small class="mb-2 text-body-tertiary">
+                                    by <i>
+                                    <?php 
+                                        // Converti gli artistIds e artistNames in array usando "|" come separatore
+                                        $artistIds = explode('|', $release['artistIds']);
+                                        $artistNames = explode('|', $release['artistNames']);
+                                        
+                                        // Itera sugli artisti e crea un link per ciascuno
+                                        $artistLinks = [];
+                                        foreach ($artistIds as $index => $artistId) {
+                                            $artistName = htmlspecialchars($artistNames[$index]);
+                                            $artistLinks[] = "<a href='artist.php?artistId=" . urlencode($artistId) . "' class='text-decoration-none'>$artistName</a>";
+                                        }
+                                        
+                                        // Unisci i link con una virgola
+                                        echo implode(', ', $artistLinks);
+                                    ?></i>
+                                </small>
 
-                            <!-- Valutazione fittizia e numero di voti -->
-                            <h2 class="mb-0">8.4</h2>
-                            <div class="text-secondary">934,137 voti</div>
+                                <!-- Valutazione fittizia e numero di voti -->
+                                <h2 class="mb-0">8.4</h2>
+                                <div class="text-secondary">934,137 voti</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-auto p-4 border-top w-100">
+                    <div class="p-4 border-top w-100">
                         <p class="text-body-tertiary mb-0">Marco e altri 3 amici hanno apprezzato questo elemento.</p>
                     </div>
                 </div>
@@ -173,12 +177,6 @@ $(document).ready(function() {
 .slider-wrapper {
     display: flex;
     transition: transform 0.5s ease;
-}
-
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .slide {
